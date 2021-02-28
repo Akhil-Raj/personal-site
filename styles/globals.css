@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Lufga";
+    src: url("/fonts/Lufga/Lufga-Bold/font.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: optional;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url("/fonts/Lufga/Lufga-Regular/font.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+}
+
+:root {
+    --primary: #47184c;
+    --secondary: #e17150;
+    --tertiary: #fcaf61;
+    --text: theme("colors.black");
+    --background: theme("colors.white");
+
+    --theme-bg: #ffecb4;
+    --theme-accent: #ffe69a;
+    --theme-accent-dark: #ffd081;
+
+    --home-bg: url("/images/bg.svg");
+}
+
+[data-theme="dark"] {
+    --primary: #fcaf61;
+    --secondary: #e17150;
+    --tertiary: #381e5f;
+    --text: theme("colors.white");
+    --background: theme("colors.black");
+
+    --theme-bg: #160c25;
+    --theme-accent: #221239;
+    --theme-accent-dark: #2d184c;
+
+    --home-bg: url("/images/bg-dark.svg");
+}
+
+html,
+body {
+    font-family: "Lufga", sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    transition: all 0.25s linear;
+    scroll-behavior: smooth;
+}
+
+.article-text {
+    font-family: "Newsreader", serif;
+}
+
+::selection {
+    background: #ffe081;
+    color: var(--background);
+}
+
+::-moz-selection {
+    background: #ffe081;
+    color: var(--background);
+}
+
+.hindi {
+    font-family: "Poppins", sans-serif;
+}
+
+.tamil {
+    font-family: "Hind Madurai", sans-serif;
+}
+
+.telugu {
+    font-family: "Hind Guntur", sans-serif;
+}
